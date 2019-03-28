@@ -68,23 +68,24 @@ function movies(movieName) {
             });
     }
 }
+//////// concert-this function has a bug!!!!!!!!!  the function doesn't work with "do-what-it-says"
 
 function concert(artist) {
     var artistdQueryUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
 
     axios.get(artistdQueryUrl).then(
         function (response) {
-            if (process.argv[2] === "do-what-it-says")
-            {console.log("-----------------------");
-            console.log("Artist: " + artist);
-            console.log(`Name of the venue: ${response.data[0].venue.name}`);
-            console.log(`Venue location: ${response.data[0].venue.city}, ${response.data[0].venue.region}`);
-            console.log("Date of the event: " + moment(response.data[0].datetime).format("MM/DD/YYYY"));
-            console.log("----------------------");
-            // if (!response.data.length) {
-            //     console.log("-----------------------");
-            //     console.log(`\nNo information for this artist avail at this time\n`);
-            //     console.log("-----------------------");
+            // if (process.argv[2] === "do-what-it-says")
+            // {console.log("-----------------------");
+            // console.log("Artist: " + artist);
+            // console.log(`Name of the venue: ${response.data[0].venue.name}`);
+            // console.log(`Venue location: ${response.data[0].venue.city}, ${response.data[0].venue.region}`);
+            // console.log("Date of the event: " + moment(response.data[0].datetime).format("MM/DD/YYYY"));
+            // console.log("----------------------");
+            if (!response.data.length) {
+                console.log("-----------------------");
+                console.log(`\nNo information for this artist available at this time\n`);
+                console.log("-----------------------");
             } else {
                 // console.log(response);
                 for (var i = 0; i < response.data.length; i++) {
@@ -182,21 +183,10 @@ function whatItSays() {
         if (error) {
             return console.log(error);
         }
-        //     // spotifyNow(data);
-
-        //     // We will then print the contents of data
-        //     // console.log(data);
-
-        //     // Then split it by commas (to make it more readable) // separate array 
-        var dataArr = data.split(","); // turns it into array
-
-        //     // We will then re-display the content as an array for later use.
-        // console.log(dataArr[1]);
+    
+        var dataArr = data.split(","); // turn string from random.txt into array
         choice(dataArr[0], dataArr[1]);
 
-
-        //     // dataArr.forEach(function (masterpiece) {
-        //     //     console.log(`${masterpiece} is the best movie ever`);
     })
 }
 
