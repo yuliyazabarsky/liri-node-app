@@ -45,3 +45,6 @@ Using the fs Node package, LIRI will take the text inside of random.txt and then
 
 It should run spotify-this-song for "I Want it That Way," as follows the text in random.txt.
 Edit the text in random.txt to test out the feature for movie-this and concert-this.
+
+<img width="704" alt="do-what-it-says" src="https://user-images.githubusercontent.com/44987476/55133195-72329e00-50ea-11e9-8ae8-448da990e4bf.png">
+
