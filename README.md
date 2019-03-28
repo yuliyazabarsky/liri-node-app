@@ -21,6 +21,8 @@ liri.js can take in one of the following commands:
 
 *** If no song is provided then your program will default to "The Sign" by Ace of Base.***
 
+<img width="697" alt="spotify-this-song" src="https://user-images.githubusercontent.com/44987476/55132991-c9843e80-50e9-11e9-8ca6-08be13f6e1ef.png">
+
 3. movie-this + name of the movie.
 
 This will output the following information to your terminal/bash window:
