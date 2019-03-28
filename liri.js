@@ -18,6 +18,7 @@ var moment = require('moment');
 // Then run a request with axios to the OMDB API with the movie specifiedvar queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
 
 function movies(movieName) {
+   
     var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
     // console.log(movieName);
     // console.log(queryUrl);process.argv.length === 3
@@ -71,6 +72,7 @@ function movies(movieName) {
 //////// concert-this function has a bug!!!!!!!!!  the function doesn't work with "do-what-it-says"
 
 function concert(artist) {
+    
     var artistdQueryUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
 
     axios.get(artistdQueryUrl).then(
@@ -114,8 +116,8 @@ var Spotify = require('node-spotify-api');
 var spotify = new Spotify(keys.spotify);
 
 function spotifyNow(userInput) {
-
-
+    
+    // var fs = require("fs");
     if (process.argv[2] === "do-what-it-says") {
         spotify.search({
             type: 'track',
@@ -188,6 +190,10 @@ function whatItSays() {
         choice(dataArr[0], dataArr[1]);
 
     })
+    // fs.appendFile("log.txt", choice, function(err) {
+    //     if (err) throw err;
+       
+    //   });
 }
 
 
@@ -212,5 +218,6 @@ var choice = function (command, query) {
             console.log("not a valid action");
 
     }
+    
 }
 choice(command, query);
