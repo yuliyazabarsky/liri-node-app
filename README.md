@@ -9,6 +9,9 @@ liri.js can take in one of the following commands:
 - Venue location
 - Date of the Event (use moment to format this as "MM/DD/YYYY")
 
+<img width="694" alt="concert-this" src="https://user-images.githubusercontent.com/44987476/55132881-7ad6a480-50e9-11e9-8d5c-a7c8f233f6f9.png">
+
+
 2. spotify-this-song + song name and show the following info: 
 
 - Artist(s)
