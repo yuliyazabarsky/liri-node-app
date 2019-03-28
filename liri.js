@@ -69,7 +69,7 @@ function movies(movieName) {
             });
     }
 }
-//////// concert-this function has a bug!!!!!!!!!  the function doesn't work with "do-what-it-says"
+//////// concert-this function has a bug - the function doesn't work with "do-what-it-says"
 
 function concert(artist) {
     
